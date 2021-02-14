@@ -1,0 +1,40 @@
+﻿@model Game
+@{
+    Game g = Model;
+}
+
+    <div class="gameEntry">
+        <img class="gameImg" src=@g.Image>
+        <p>Index: @g.Index</p>
+        <p>Title: @g.Title</p>
+        <p>Platform: @g.Platform</p>
+        <p>Genre: @g.Genre</p>
+        <p>Rating: @g.Rating</p>
+        <p>Release Year: @g.ReleaseYear</p>
+        @if (g.LoanedTo != null)
+        {
+            <p class="loanText">Loaned To: @g.LoanedTo</p>
+            <p class="loanText">Loan Date: @g.LoanDate</p>
+            <form asp-action="Return" method="post">
+                <input type="hidden" name="i" value="@g.Index" />
+                <button type="submit">Return</button>
+            </form>
+        }
+        else
+        {
+            <form asp-action="Borrow" method="post">
+                <input asp-for="LoanedTo" name="name" placeholder="Name" />
+                <input asp-for="LoanDate" name="date" placeholder="Name" />
+                <input type="hidden" name="i" value="@g.Index" />
+                <button type="submit">Borrow</button>
+            </form>
+            <form asp-action="Remove" method="post">
+                <input type="hidden" name="Index" value="@g.Index" />
+                <button type="submit">Remove</button>
+            </form>
+        }
+        <form asp-action="Edit" method="get">
+            <input type="hidden" name="Index" value="@g.Index" />
+            <button type="submit">Edit</button>
+        </form>
+    </div>

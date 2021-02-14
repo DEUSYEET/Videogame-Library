@@ -1,0 +1,32 @@
+﻿<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewData["Title"]</title>
+    <link rel="stylesheet" href="~/StyleSheet.css" />
+    <link rel="icon" href="~/favicon.ico" type="image/x-icon">
+</head>
+<body>
+    <img id="logo" src="~/saltlogotitle.png" />
+    <div id="navBar">
+        <a asp-action="Index">
+            <div class="navButton">
+                Home
+            </div>
+        </a>
+        <a asp-action="Library">
+            <div class="navButton">
+                Library
+            </div>
+        </a>
+        <a asp-action="Add">
+            <div class="navButton">
+                Add Game
+            </div>
+        </a>
+    </div>
+    @RenderBody()
+    <div id="footBar">
+        <p id="footText">Sonoran Sand Studios &copy;@DateTime.Now.Year</p>
+    </div>
+</body>
+</html>

@@ -1,0 +1,36 @@
+﻿@model IEnumerable<Game>
+@{
+    int i = Model.Count();
+}
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<p id="gameCount">Current Game Count: @i</p>
+<form asp-action="Search" method="post">
+    <input type="text" name="key" required/>
+    <button type="submit">Search</button>
+</form>
+<form asp-action="Filter" method="post">
+    <label for="Genre">Genre</label>
+    <input type="text" name="Genre" />
+    <label for="Platform">Platform</label>
+    <input type="text" name="Platform" />
+    <select name="Rating">
+        <option value=null>Rating</option>
+        <option value="RP">Rating Pending</option>
+        <option value="eC">Early Childhood</option>
+        <option value="E">Everyone</option>
+        <option value="E10">Everyone 10+</option>
+        <option value="T">Teen</option>
+        <option value="M">Mature</option>
+        <option value="Ao">Adults Only</option>
+        <option value="Not Rated">Not Rated</option>
+    </select>
+    <button type="submit">Filter</button>
+</form>
+<div id="gameList">
+    @foreach (Game g in Model)
+    {
+        <partial name="_GameEntry" model="g" />
+    }
+</div>

@@ -1,0 +1,151 @@
+﻿* {
+    box-sizing: border-box;
+}
+
+html {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+body {
+    background-color: #696969;
+}
+
+a {
+    color: #ffffff;
+    text-decoration: none;
+}
+
+    a:visited {
+        text-decoration: none;
+    }
+
+    a:hover {
+        text-decoration: underline;
+    }
+
+#logo {
+    height: 10vh;
+}
+
+#navBar {
+    width: 99vw;
+    height: 5vh;
+    background-color: #a0a0a0;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    font-size: 2vh;
+    margin-top: .5vh;
+    border-radius: 10px;
+}
+
+.navButton {
+    background-color: #175aac;
+    width: 20vw;
+    height: 2.5vh;
+    margin: 1.25vh 1vw;
+    text-align: center;
+    border-radius: 10px;
+}
+
+/*.mainNav {
+    background-color: #95ffe5;
+    width: 50vw;
+    height: 20vh;
+    margin: 10vh 25vw;
+    padding: 2vh 0vw;
+    text-align: center;
+    font-size: 10vh;
+    border-radius: 15px;
+}*/
+
+#descBox {
+    width: 99vw;
+    height: 70vh;
+    margin: 5vh 0vw;
+    display: flex;
+    flex-direction: column;
+    text-align:center;
+    font-size: 2.5vh;
+    color:#cfcfcf
+}
+h1{
+    font-size:5vh;
+    margin:0.1vh;
+    font-weight:bold;
+}
+h2 {
+    font-size: 3.5vh;
+}
+h3 {
+    font-size: 2vh;
+    font-style:italic;
+}
+.mainImg {
+    height: 10vh;
+    width: 10vh;
+    margin: 0vh 1vw;
+    align-self:center;
+}
+
+/*.form {
+    background-color: rgba(149, 242, 255, 0.67);
+    width: 50vw;
+    height: 70vh;
+    margin: 00vh 25vw;
+    padding: 0.5vh 4vw;
+    font-size: 4vh;
+    border-radius: 15px;
+}*/
+
+#gameList {
+    background-color: rgba(19, 67, 125, 0.69);
+    width: 90vw;
+    height: 74vh;
+    margin: 1vh 5vw;
+    padding: 0.5vh 0vw;
+    font-size: 2vh;
+    border-radius: 5px;
+    display:flex;
+    font-size: .7vw;
+
+}
+.gameEntry {
+    background-color: rgba(255, 255, 255, 0.69);
+    width: 11vw;
+    height: 55vh;
+    margin: 0vh .5vw;
+    padding: 0.5vh 0.5vw;
+    border-radius: 5px;
+    font-weight:700;
+}
+.gameImg{
+    height: 30vh;
+    width: 10vw;
+}
+.loanText{
+    color:#6d0003;
+    font-weight:800;
+}
+p{
+    margin:0;
+    padding:0;
+}
+input{
+    width:10vw;
+    height:2vh;
+}
+#footBar {
+    width: 99vw;
+    height: 2vh;
+    border-radius: 5px;
+    background-color: #2f2f2f;
+    color: #696969;
+    font-size: 1.5vh;
+    text-align: center;
+}
+#gameCount{
+    text-align:center;
+    color:#eaeaea;
+    font-size:1.2vw;
+}
